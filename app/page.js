@@ -17,7 +17,7 @@ export default function Home() {
         <span>LinkedIn</span>
         <span>Github</span>
       </div>
-      <div className="info-h">
+      <div className="info-v">
         <span>Leetcode</span>
         <span>Codeforces</span>
         <span>Codechef</span>
