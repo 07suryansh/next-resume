@@ -14,13 +14,14 @@ export default function Home() {
         <span>+919889666781</span>
       </div>
       <div className="info-v">
-        <span>LinkedIn</span>
-        <span>Github</span>
+        <span><a href="https://www.linkedin.com/in/07suryansh/">LinkedIn</a></span>
+        <span><a href="https://github.com/07suryansh">Github</a></span>
+        <span><a href="https://suryanshbisen.vercel.app">Portfolio</a></span>
       </div>
       <div className="info-v">
-        <span>Leetcode</span>
-        <span>Codeforces</span>
-        <span>Codechef</span>
+        <span><a href="https://leetcode.com/u/07suryansh/">Leetcode</a></span>
+        <span><a href="https://codeforces.com/profile/07suryansh">Codeforces</a></span>
+        <span><a href="https://www.codechef.com/users/bisensuryansh">Codechef</a></span>
       </div>
       <div className="heading">Education</div>
       <div className="info-v">
@@ -89,7 +90,7 @@ export default function Home() {
           <b>Freedom of Gaming</b>
         </span>
         <span>
-          <a>Link →</a>
+          <a href="https://fog-frontend.vercel.app">Link →</a>
         </span>
         <span>
           Engineered and launched a React.js-based game dashboard UI clone on
@@ -112,7 +113,7 @@ export default function Home() {
           <b>Dynamic Task List</b>
         </span>
         <span>
-          <a>Link →</a>
+          <a href="https://greenstich.vercel.app">Link →</a>
         </span>
         <span>
           Developed features allowing users to add tasks with titles and
@@ -137,7 +138,7 @@ export default function Home() {
           <b>Order Management System</b>
         </span>
         <span>
-          <a>Link →</a>
+          <a href="https://suryanshbisen.vercel.app/projects">Link →</a>
         </span>
         <span>
           Designed and implemented the Order Management System (OMS) API,
@@ -158,7 +159,7 @@ export default function Home() {
           <b>Finearts NITH</b>
         </span>
         <span>
-          <a>Link →</a>
+          <a href="https://fineartsnith.vercel.app">Link →</a>
         </span>
         <span>
           Led the creation of the ”FineArts NITH” website using React.js,
