@@ -1,24 +1,56 @@
-import Image from "next/image";
+// import Image from "next/image";
+"use client";
 import "./page.css";
+import axios from "axios";
 
 export default function Home() {
+
+  const handleDownload = async () => {
+    const fileId = "1ZfxjVCV_2Ut-NwQ_G5fDNusO84ZMf9Yk";
+    const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
+
+    try {
+      const response = await fetch(downloadUrl, {
+        method: 'GET',
+        headers: {
+          'Accept': 'application/json',
+        },
+      });
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      const blob = await response.blob();
+      const fileURL = window.URL.createObjectURL(blob);
+      const alink = document.createElement("a");
+      alink.href = fileURL;
+      alink.download = "resume.pdf";
+      alink.click();
+      window.URL.revokeObjectURL(fileURL);
+    } catch (error) {
+      console.error('Download failed:', error);
+    }
+  };
+
+
+
+
   return (
     <div className="resume">
       <div className="nav">
         <div className="head">Resume</div>
-        <button className="btn">Download</button>
+        <button className="btn" onClick={handleDownload}>Download</button>
       </div>
       <div className="info-v">
         <span>Suryansh Singh Bisen</span>
         <span>07suryansh@gmail.com</span>
         <span>+919889666781</span>
       </div>
-      <div className="info-v">
+      <div className="info-h">
         <span><a href="https://www.linkedin.com/in/07suryansh/">LinkedIn</a></span>
         <span><a href="https://github.com/07suryansh">Github</a></span>
         <span><a href="https://suryanshbisen.vercel.app">Portfolio</a></span>
       </div>
-      <div className="info-v">
+      <div className="info-h">
         <span><a href="https://leetcode.com/u/07suryansh/">Leetcode</a></span>
         <span><a href="https://codeforces.com/profile/07suryansh">Codeforces</a></span>
         <span><a href="https://www.codechef.com/users/bisensuryansh">Codechef</a></span>
@@ -88,9 +120,7 @@ export default function Home() {
       <div className="info-v">
         <span>
           <b>Freedom of Gaming</b>
-        </span>
-        <span>
-          <a href="https://fog-frontend.vercel.app">Link →</a>
+          <a href="https://fog-frontend.vercel.app"> &nbsp; [Link →]</a>
         </span>
         <span>
           Engineered and launched a React.js-based game dashboard UI clone on
@@ -111,9 +141,7 @@ export default function Home() {
       <div className="info-v">
         <span>
           <b>Dynamic Task List</b>
-        </span>
-        <span>
-          <a href="https://greenstich.vercel.app">Link →</a>
+          <a href="https://greenstich.vercel.app"> &nbsp; [Link →]</a>
         </span>
         <span>
           Developed features allowing users to add tasks with titles and
@@ -136,9 +164,7 @@ export default function Home() {
       <div className="info-v">
         <span>
           <b>Order Management System</b>
-        </span>
-        <span>
-          <a href="https://suryanshbisen.vercel.app/projects">Link →</a>
+          <a href="https://suryanshbisen.vercel.app/projects"> &nbsp; [Link →]</a>
         </span>
         <span>
           Designed and implemented the Order Management System (OMS) API,
@@ -157,9 +183,7 @@ export default function Home() {
       <div className="info-v">
         <span>
           <b>Finearts NITH</b>
-        </span>
-        <span>
-          <a href="https://fineartsnith.vercel.app">Link →</a>
+          <a href="https://fineartsnith.vercel.app"> &nbsp; [Link →]</a>
         </span>
         <span>
           Led the creation of the ”FineArts NITH” website using React.js,
