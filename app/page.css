@@ -96,6 +96,8 @@
     flex-direction: column;
     border-radius: 10px;
     margin: 6px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1), /* Soft, large shadow */
+              0px 4px 10px rgba(0, 0, 0, 0.05); /* Subtle inner shadow */
 }
 .info-v>span{
     border-bottom: 1px solid #e0e0e0;
@@ -112,6 +114,8 @@
     border-radius: 10px;
     margin: 6px;
     justify-content: space-evenly;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1), /* Soft, large shadow */
+              0px 4px 10px rgba(0, 0, 0, 0.05); /* Subtle inner shadow */
 }
 .info-h>span{
     border-right: 1px solid #e0e0e0;
