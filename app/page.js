@@ -207,7 +207,7 @@ export default function Home() {
       <div className="info-v">
         <span>Max rating of 1756 on Leetcode</span>
         <span>Max rating of 1688 (3 stars) on Codechef</span>
-        <span>Max rating of 1222 (Pupil) on Codeforces</span>
+        <span>Max rating of 1241 (Pupil) on Codeforces</span>
       </div>
 
     </div>
